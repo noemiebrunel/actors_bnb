@@ -1,4 +1,4 @@
 class Actor < ApplicationRecord
-  belongs_to :users
-  has_many :booking
+  belongs_to :user
+  has_many :bookings
 end
