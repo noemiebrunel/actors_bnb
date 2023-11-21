@@ -4,7 +4,7 @@ class ActorsController < ApplicationController
   end
 
   def show
-    @actor = Actor.find[:id]
+    @actor = Actor.find(params[:id])
   end
 
   def new
@@ -19,7 +19,7 @@ class ActorsController < ApplicationController
 
 
     if @actor.save!
-      redirect_to actor_path, notice: 'Actor was successfully created.'
+      redirect_to @actor, notice: 'Actor was successfully created.'
     else
       render :new, status: :unprocessable_entity
     end
@@ -40,7 +40,9 @@ class ActorsController < ApplicationController
   end
 
   def destroy
-    @actor = Actor.destroy
+    @actor = Actor.find(params[:id])
+    @actor.destroy
+    redirect_to actors_path
   end
 
   private
