@@ -1,8 +1,8 @@
 
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon border-bottom">
   <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
 
+    <%= link_to root_path, class: "navbar-brand" do %>
       <%= image_tag "actorsbnb.png" %>
     <% end %>
 
@@ -14,8 +14,13 @@
       <ul class="navbar-nav me-auto">
       <% if user_signed_in? %>
           <li class="nav-item active">
-            <%= link_to "Home", "root", class: "nav-link" %>
+            <%= link_to new_actor_path, class: "nav-link" do %>
+              <i class="fa-solid fa-person-circle-plus"></i> Nouvel acteur
+            <% end %>
           </li>
+
+
+
           <li class="nav-item">
             <%= link_to "Dashboard", "#dashboard", class: "nav-link" %>
           </li>
@@ -24,7 +29,7 @@
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Action", "#", class: "dropdown-item" %>
               <%= link_to "Another action", "#", class: "dropdown-item" %>
-              <%= link_to "Log out", "#", class: "dropdown-item", data: {turbo_method: :delete} %>
+              <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
             </div>
           </li>
                 <% else %>
