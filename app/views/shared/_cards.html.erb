@@ -1,85 +1,19 @@
 
-<div class="main-container">
+<div class="container ">
 
-<div class="cards">
-
-  <div class="card-trip">
-    <%= image_tag "celine.png" %>
-    <div class="card-trip-infos">
-      <div>
-        <h2>Céline Fion</h2>
-        <p>J’irai où c’est que tu vas</p>
-        <h2 class="card-trip-pricing">30€</h2>
-      </div>
-    </div>
-  </div>
-
-  <div class="card-trip">
-    <%= image_tag "celine.png" %>
-    <div class="card-trip-infos">
-      <div>
-        <h2>Céline Fion</h2>
-        <p>J’irai où c’est que tu vas</p>
-        <h2 class="card-trip-pricing">30€</h2>
-      </div>
-    </div>
-  </div>
-
-    <div class="card-trip">
-    <%= image_tag "celine.png" %>
-    <div class="card-trip-infos">
-      <div>
-        <h2>Céline Fion</h2>
-        <p>J’irai où c’est que tu vas</p>
-        <h2 class="card-trip-pricing">30€</h2>
-      </div>
-    </div>
-  </div>
-
-    <div class="card-trip">
-    <%= image_tag "celine.png" %>
-    <div class="card-trip-infos">
-      <div>
-        <h2>Céline Fion</h2>
-        <p>J’irai où c’est que tu vas</p>
-        <h2 class="card-trip-pricing">30€</h2>
-      </div>
-    </div>
-  </div>
-
-    <div class="card-trip">
-    <%= image_tag "celine.png" %>
-    <div class="card-trip-infos">
-      <div>
-        <h2>Céline Fion</h2>
-        <p>J’irai où c’est que tu vas</p>
-        <h2 class="card-trip-pricing">30€</h2>
-      </div>
-    </div>
-  </div>
-
-    <div class="card-trip">
-    <%= image_tag "celine.png" %>
-    <div class="card-trip-infos">
-      <div>
-        <h2>Céline Fion</h2>
-        <p>J’irai où c’est que tu vas</p>
-        <h2 class="card-trip-pricing">30€</h2>
-      </div>
-    </div>
-  </div>
-
+  <div class="cards">
+    <% @actors.each do |actor| %>
       <div class="card-trip">
-    <%= image_tag "celine.png" %>
-    <div class="card-trip-infos">
-      <div>
-        <h2>Céline Fion</h2>
-        <p>J’irai où c’est que tu vas</p>
-        <h2 class="card-trip-pricing">30€</h2>
+        <%= image_tag "celine.png" %>
+        <div class="card-trip-infos">
+          <div>
+            <h2><%= actor.username %></h2>
+            <p><%= actor.description %></p>
+            <h2 class="card-trip-pricing"><%= actor.price %>€</h2>
+
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-
-
+      <% end %>
   </div>
 </div>
