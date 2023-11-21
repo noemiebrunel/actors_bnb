@@ -1,0 +1,16 @@
+<h1>Voici l'acteur: <%= @actor.username%></h1>
+<div class="container col-sm-8">
+  <p><%= @actor.description %></p>
+  <h3><%= @actor.price %></h3>
+
+  <%= link_to "delete", actor_path(@actor),
+data: { turbo_method: :delete, turbo_confirm: "are you sure"} %>
+
+
+</div>
+<div class="container col-sm-4">
+
+
+
+
+</div>

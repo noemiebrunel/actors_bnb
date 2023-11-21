@@ -9,6 +9,7 @@ class ActorsController < ApplicationController
 
   def new
     @actor = Actor.new
+  end
 
   def create
     @actor = Actor.new(actor_params)
@@ -33,8 +34,6 @@ class ActorsController < ApplicationController
     end
   end
 
-  end
-
   def destroy
     @actor = Actor.destroy
   end
@@ -44,5 +43,4 @@ class ActorsController < ApplicationController
   def actor_params
     params.require(:actor).permit(:username, :email, :description, :price, :user_id)
   end
-
 end
