@@ -1,0 +1,32 @@
+.categories {
+  background: #F4F4F4;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  padding: 0px 50px;
+  color: #717171;
+}
+
+.categories_links {
+  display: flex;
+  align-items: center;
+}
+.categories_links a {
+  color: #222222;
+  opacity: 0.15;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+.categories_links a:hover {
+  opacity: 1;
+}
+
+
+.icone {
+  position: relative;
+  bottom: 1em;
+  text-align: center;
+}
