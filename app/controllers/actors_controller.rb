@@ -1,6 +1,6 @@
 class ActorsController < ApplicationController
   def index
-    @actor = Actor.all
+    @actors = Actor.all
   end
 
   def show
@@ -16,7 +16,7 @@ class ActorsController < ApplicationController
     if @actor.save
       redirect_to @actor, notice: 'Actor was successfully created.'
     else
-      render :new, status: :unproccessable_entity
+      render :new
     end
   end
 
