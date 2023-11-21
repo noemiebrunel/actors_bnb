@@ -1,6 +1,6 @@
 class ActorsController < ApplicationController
   def index
-    @actor = Actor.all
+    @actors = Actor.all
   end
 
   def show
@@ -9,13 +9,14 @@ class ActorsController < ApplicationController
 
   def new
     @actor = Actor.new
+  end
 
   def create
     @actor = Actor.new(actor_params)
     if @actor.save
       redirect_to @actor, notice: 'Actor was successfully created.'
     else
-      render :new, status: :unproccessable_entity
+      render :new
     end
   end
 
@@ -33,8 +34,6 @@ class ActorsController < ApplicationController
     end
   end
 
-  end
-
   def destroy
     @actor = Actor.destroy
   end
@@ -44,5 +43,4 @@ class ActorsController < ApplicationController
   def actor_params
     params.require(:actor).permit(:username, :email, :description, :price, :user_id)
   end
-
 end

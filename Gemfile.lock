@@ -281,6 +281,7 @@ PLATFORMS
 
 DEPENDENCIES
   autoprefixer-rails
+  bcrypt (~> 3.1.7)
   bootsnap
   bootstrap (~> 5.2)
   capybara
@@ -290,9 +291,11 @@ DEPENDENCIES
   font-awesome-sass (~> 6.1)
   importmap-rails
   jbuilder
+  orm_adapter
   pg (~> 1.1)
   puma (>= 5.0)
   rails (~> 7.1.2)
+  responders
   sassc-rails
   selenium-webdriver
   simple_form!
@@ -300,6 +303,7 @@ DEPENDENCIES
   stimulus-rails
   turbo-rails
   tzinfo-data
+  warden
   web-console
 
 RUBY VERSION
