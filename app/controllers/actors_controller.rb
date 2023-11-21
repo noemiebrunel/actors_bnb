@@ -34,7 +34,6 @@ class ActorsController < ApplicationController
     end
   end
 
-
   def destroy
     @actor = Actor.destroy
   end
