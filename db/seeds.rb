@@ -20,7 +20,7 @@ marion = User.create!(username: "marion", email: "marion@mail.com", password: "a
 p "users done"
 p "there are #{User.count} users"
 
-brad_pitch = Actor.create!(username: "brad pitch", mail: "brad@mail.com", description: "je suisacteur depuis 30 ans", price: 50, user_id: juan.id)
+brad_pitch = Actor.create!(username: "brad pitch", mail: "brad@mail.com", description: "  ", price: 50, user_id: juan.id)
 shwarzminiburne = Actor.create!(username: "shwarzminiburne", mail: "shwarz@mail.com", description: "il y a 10 ans j'ai fait une apparition dans Joséphine Ange Gardien", price: 1000, user_id: noemie.id)
 constantin_le_tarniner = Actor.create!(username: "constantin", mail: "letartiner@mail.com", description: "je suisacteur depuis 30 ans j'ai les plus gros biceps du marché de wazemmes", price: 10, user_id: oscar.id)
 bretzel_margintop = Actor.create!(username: "bretzel_margintop", mail: "bretzel@mail.com", description: "je suisacteur depuis 30 ans j'ai les plus gros biceps du marché de wazemmes", price: 10, user_id: cyril.id)

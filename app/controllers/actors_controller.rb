@@ -12,11 +12,16 @@ class ActorsController < ApplicationController
   end
 
   def create
+
     @actor = Actor.new(actor_params)
-    if @actor.save
-      redirect_to @actor, notice: 'Actor was successfully created.'
+
+    @actor.user = current_user
+
+
+    if @actor.save!
+      redirect_to actor_path, notice: 'Actor was successfully created.'
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
@@ -41,6 +46,6 @@ class ActorsController < ApplicationController
   private
 
   def actor_params
-    params.require(:actor).permit(:username, :email, :description, :price, :user_id)
+    params.require(:actor).permit(:username, :mail, :description, :price)
   end
 end
