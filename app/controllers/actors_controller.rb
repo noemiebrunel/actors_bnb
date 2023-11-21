@@ -14,7 +14,7 @@ class ActorsController < ApplicationController
   def create
     @actor = Actor.new(actor_params)
     if @actor.save
-      redirect_to actor_path(@actor), notice: 'Actor was successfully created.'
+      redirect_to @actor, notice: 'Actor was successfully created.'
     else
       render :new
     end
