@@ -1,13 +1,15 @@
-<h1>Voici l'acteur: <%= @actor.username%></h1>
-<div class="container col-sm-8">
-  <p><%= @actor.description %></p>
-  <h3><%= @actor.price %></h3>
+<h2 class="profile_title">Découvrez le profil de <%= @actor.username%></h2>
+<div class="card-product">
+  <%= image_tag "celine.png", class: "profile_show" %>
+  <div class="card-product-infos">
+        <h2><%= @actor.username %></h2>
+        <p><%= @actor.description %></p>
+        <h2><%= @actor.price %> € / jour</h2>
+        <%= link_to "Contacter", "#", class: "btn btn-ghost-2" %>
+</div>
+</div>
 
-  <%= link_to "delete", actor_path(@actor),
+
+
+<%# <%= link_to "delete", actor_path(@actor),
 data: { turbo_method: :delete, turbo_confirm: "are you sure"} %>
-
-
-</div>
-<div class="container col-sm-4">
-
-</div>
