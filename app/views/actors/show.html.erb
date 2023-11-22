@@ -8,7 +8,9 @@
         <% if current_user == @actor.user %>
         <%= link_to "Editer", edit_actor_path(@actor), class: "btn btn-ghost-2" %>
         <% else %>
-        <%= link_to "Contacter", "#", class: "btn btn-ghost-2" %>
+        <button type="button" class="btn btn-ghost-2" data-bs-toggle="modal" data-bs-target="#bookingModal">
+        Contacter
+        </button>
         <% end %>
 </div>
 </div>
