@@ -27,16 +27,16 @@ class ActorsController < ApplicationController
   end
 
   def edit
-    @actor = Actor.find[:id]
+    @actor = Actor.find(params[:id])
   end
 
   def update
-    @actor = actor.find([:id])
-    if @actor.update_attributes
-      flash[:success] = "Actor updated!"
+    @actor = Actor.find(params[:id])
+    if @actor.update(actor_params)
+      flash[:notice] = "Actor updated!"
       redirect_to @actor
     else
-      render action: :edit
+      render :edit
     end
   end
 

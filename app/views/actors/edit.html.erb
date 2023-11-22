@@ -1,0 +1,16 @@
+<div class="form-container">
+  <div class="row">
+    <div class="col">
+      <div class="form-group">
+        <h2>Modifier l'acteur</h2>
+        <%= simple_form_for(@actor) do |f|%>
+          <%= f.input :username, label: "Nom d'utilisateur" %>
+          <%= f.input :mail, label: "E-mail" %>
+          <%= f.input :price, label: "Tarif journalier" %>
+          <%= f.input :description, label: "Description" %>
+          <%= f.submit "Valider", class: "btn-ghost" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
