@@ -3,21 +3,17 @@
 
   <div class="cards">
     <% @actors.each do |actor| %>
-    <%= link_to(actor_path(actor)) do %>
-
       <div class="card-trip">
-        <%= image_tag "celine.png"  %>
+        <%= image_tag "celine.png" %>
         <div class="card-trip-infos">
           <div>
             <h2><%= actor.username %></h2>
             <p><%= actor.description %></p>
             <h2 class="card-trip-pricing"><%= actor.price %>€</h2>
 
-
           </div>
         </div>
       </div>
-      <% end %>
       <% end %>
   </div>
 </div>
