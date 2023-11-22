@@ -1,7 +1,7 @@
 .form-container {
   display: flex;
   justify-content: center;
-  background-color: white;
+  // background-color: white;
   border-radius: 10px;
   margin-right: 600px;
   margin-left: 600px;
@@ -18,7 +18,8 @@
 }
 
 .form-control {
-  padding: 0.375rem 9.75rem;
+  height: 50px;
+  width: 300px;
 }
 
 .form-container h2 {
