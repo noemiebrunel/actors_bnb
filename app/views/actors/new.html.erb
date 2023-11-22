@@ -8,11 +8,7 @@
         <%= f.input :mail, label: "E-mail" %>
         <%= f.input :price, label: "Tarif journalier" %>
         <%= f.input :description, label: "Description" %>
-              <%= simple_form_for(@actor) do |f| %>
-                <!-- [...] -->
-                <%= f.input :photo, as: :file %>
-                <!-- [...] -->
-              <% end %>
+        <%= f.input :photo, as: :file %>
         <%= f.submit "Valider", class: "btn-ghost" %>
       <% end %>
       </div>
