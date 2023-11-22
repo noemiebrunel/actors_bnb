@@ -7,7 +7,7 @@
 </div>
 </div>
 <div class="card-product">
-  <%= image_tag "celine.png", class: "profile_show" %>
+  <%= cl_image_tag @actor.photo.key, height: 300, width: 400, crop: :fill, class: "profile_show" %>
   <div class="card-product-infos">
         <h2><%= @actor.username %></h2>
         <p><%= @actor.description %></p>

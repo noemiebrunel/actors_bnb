@@ -4,7 +4,11 @@
     <% @actors.each do |actor| %>
       <%= link_to(actor_path(actor)) do %>
         <div class="card-trip">
-          <%= image_tag "celine.png" %>
+           <%if actor.photo.attached? %>
+            <%=cl_image_tag actor.photo.key, height: 300, width: 400, crop: :fill, class: "profile_show" %>
+            <% else %>
+            <%= image_tag "celine.png", height: 300, width: 400, class: "profile_show" %>
+            <% end %>
           <div class="card-trip-infos">
             <div>
               <h2><%= actor.username %></h2>
