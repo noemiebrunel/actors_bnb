@@ -1,7 +1,7 @@
 .modal-content {
   display: flex;
   justify-content: center;
-  // background-color: white;
+  background-color: white;
   border-radius: 10px;
   border-color: white;
   // margin-right: 600px;
@@ -9,10 +9,6 @@
   margin-top: 30px;
   padding: 50px;
   box-shadow: 0 0 10px rgba(108, 108, 108, 0.2);
-}
-
-
-.modal-content {
   padding-right: 100px;
   padding-left: 100px;
 
@@ -22,6 +18,7 @@
   height: 50px;
   width: 300px;
 }
+
 
 .form-container h2 {
   font-size: 32px;
