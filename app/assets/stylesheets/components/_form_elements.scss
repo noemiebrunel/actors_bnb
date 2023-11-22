@@ -1,11 +1,12 @@
 .form-container {
   display: flex;
   justify-content: center;
-  // background-color: white;
+  background: white;
   border-radius: 10px;
   margin-right: 600px;
   margin-left: 600px;
   margin-top: 30px;
+  margin-bottom: 30px;
   padding: 50px;
   box-shadow: 0 0 10px rgba(108, 108, 108, 0.2);
 }
@@ -23,6 +24,24 @@
 }
 
 .form-container h2 {
+  font-size: 32px;
+  padding-bottom: 16px;
+  font-weight: bold;
+}
+
+.form-container-2 {
+  display: flex;
+  justify-content: center;
+  // background-color: white;
+  border-radius: 10px;
+  margin-right: 600px;
+  margin-left: 600px;
+  margin-top: 30px;
+  padding: 50px;
+  box-shadow: 0 0 10px rgba(108, 108, 108, 0.2);
+}
+
+.form-container-2 h2 {
   font-size: 32px;
   padding-bottom: 16px;
   font-weight: bold;
