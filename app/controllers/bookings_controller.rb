@@ -12,6 +12,22 @@ class BookingsController < ApplicationController
     end
   end
 
+  def edit
+    @actor = Actor.find(params[:actor_id])
+    @booking = Booking.find(params[:id])
+  end
+
+  def update
+    @actor = Actor.find(params[:actor_id])
+    @bookin = @actor.booking.find(params[:id])
+    if @booking.update(booking_params)
+      flash[:success] = "Task updated!"
+      redirect_to @actor
+    else
+      render action: :edit
+    end
+  end
+
   private
 
   def booking_params
