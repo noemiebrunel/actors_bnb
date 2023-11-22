@@ -12,7 +12,7 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     @actor = Actor.find(params[:actor_id])
-    @bookmark.actor = @actor
+    @booking.actor = @actor
     if @bookmark.save
       redirect_to actor_path(@actor)
     else
@@ -23,6 +23,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:actor_id, :start_date, :end_date, :type)
+    params.require(:booking).permit(:actor_id , :start_date, :end_date, :type)
   end
 end
