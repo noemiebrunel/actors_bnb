@@ -49,6 +49,6 @@ class ActorsController < ApplicationController
   private
 
   def actor_params
-    params.require(:actor).permit(:username, :mail, :description, :price)
+    params.require(:actor).permit(:username, :mail, :description, :price, :photo)
   end
 end
