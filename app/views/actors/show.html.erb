@@ -12,8 +12,9 @@
         <% end %>
 </div>
 </div>
+ <%= render "shared/booking_form", actor: @actor, booking: @booking %>
 
 
-
+<%# Path: app/views/actors/show.html.erb %>
 <%# <%= link_to "delete", actor_path(@actor),
-data: { turbo_method: :delete, turbo_confirm: "are you sure"} %>
+#data: { turbo_method: :delete, turbo_confirm: "are you sure"} %>
