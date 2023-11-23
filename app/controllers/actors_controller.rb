@@ -2,7 +2,8 @@ class ActorsController < ApplicationController
   def index
     @actors = Actor.all
     if params[:query].present?
-      @actors = @actors.where(category: params[:query])
+      @actors = @actors.where("category ILIKE ?", "%#{params[:query]}%")
+
     end
   end
 
