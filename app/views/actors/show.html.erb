@@ -1,31 +1,34 @@
 <div class="container">
-<div class="back">
-<h2 class="profile_title">Découvrez le profil de <%= @actor.username%></h2>
-<div class="bouton_back">
-<%= render "shared/back" %>
-</div>
-</div>
+  <div class="back">
+    <h2 class="profile_title">Découvrez le profil de <%= @actor.username%></h2>
+    <div class="bouton_back">
+      <%= render "shared/back" %>
+    </div>
+  </div>
 </div>
 <div class="card-product">
   <%if @actor.photo.attached? %>
-    <%= cl_image_tag @actor.photo.key, height: 300, width: 400, crop: :fill, class: "profile_show" %>
+  <%= cl_image_tag @actor.photo.key, height: 300, width: 400, crop: :fill, class: "profile_show" %>
   <% else %>
-    <%= image_tag "celine.png", height: 300, width: 400, class: "profile_show" %>
+  <%= image_tag "celine.png", height: 300, width: 400, class: "profile_show" %>
   <% end %>
   <div class="card-product-infos">
-        <h2><%= @actor.username %></h2>
-        <p><%= @actor.description %></p>
-        <h3><%= @actor.price %> € / jour</h3>
-        <% if current_user == @actor.user %>
-        <%= link_to "Editer", edit_actor_path(@actor), class: "btn btn-ghost-inside" %>
-        <% else %>
-        <button type="button" class="btn btn-ghost-inside" data-bs-toggle="modal" data-bs-target="#bookingModal">
-        Contacter
-        </button>
-        <% end %>
+    <h2><%= @actor.username %></h2>
+    <p><%= @actor.description %></p>
+    <h3><%= @actor.price %> € / jour</h3>
+    <% if current_user == @actor.user %>
+    <%= link_to "Editer", edit_actor_path(@actor), class: "btn btn-ghost-inside" %>
+    <%= link_to actor_path(@actor), method: :delete, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "delete-link" do %>
+    <i class="fa-solid fa-trash"></i>
+    <% end %>
+    <% else %>
+    <button type="button" class="btn btn-ghost-inside" data-bs-toggle="modal" data-bs-target="#bookingModal">
+      Contacter
+    </button>
+    <% end %>
+  </div>
 </div>
-</div>
- <%= render "shared/booking_form", actor: @actor, booking: @booking %>
+<%= render "shared/booking_form", actor: @actor, booking: @booking %>
 
 
 <%# Path: app/views/actors/show.html.erb %>
