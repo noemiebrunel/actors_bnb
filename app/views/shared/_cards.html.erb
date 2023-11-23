@@ -12,7 +12,8 @@
           <div class="card-trip-infos">
             <div>
               <h2><%= actor.username %></h2>
-              <p><%= actor.description %></p>
+              <% @actor_description = actor.description %>
+              <p><%= truncate(@actor_description, :length => 30, :separator => "...")%></p>
               <h3 class="card-trip-pricing"><%= actor.price %>€ / jour</h3>
             </div>
           </div>
