@@ -8,7 +8,6 @@
             <%= simple_form_for [actor, booking] do |f| %>
             <%= f.input :start_date, as: :date, html5: true, label: "Date de début"%>
             <%= f.input :end_date, as: :date, html5: true, label: "Date de fin" %>
-            <%= f.input :category, label: "Décrivez votre demande"%>
             <%= f.submit "Envoyer", class: "btn btn-ghost-3" %>
             <% end %>
           </div>
