@@ -1,9 +1,9 @@
+<div class="position_back_button">
+<%= render "shared/back" %>
+</div>
 <div class="container">
   <div class="back">
     <h2 class="profile_title">Découvrez le profil de <%= @actor.username%></h2>
-    <div class="bouton_back">
-      <%= render "shared/back" %>
-    </div>
   </div>
 </div>
 <div class="card-product">
@@ -18,7 +18,7 @@
 
     <h2><%= @actor.price %> € / jour</h2>
     <% if current_user == @actor.user %>
-    <%= link_to "Editer", edit_actor_path(@actor), class: "btn btn-ghost-inside" %>
+    <%= link_to "Editer", edit_actor_path(@actor), class: "btn btn-ghost-inside-2" %>
     <% else %>
     <button type="button" class="btn btn-ghost-inside" data-bs-toggle="modal" data-bs-target="#bookingModal">
       Contacter

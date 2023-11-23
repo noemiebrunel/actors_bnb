@@ -31,7 +31,8 @@
 
 .card-product {
   overflow: hidden;
-  height: 400px;
+  min-height: 200px;
+  // height: 400px;
   margin-left: 200px;
   margin-right: 200px;
   margin-top: 30px;
@@ -44,8 +45,8 @@
 }
 
 .profile_show {
-  height: 100%;
-  width: 400px;
+  height: auto;
+  max-width: 400px;
   object-fit: cover;
 }
 
@@ -130,4 +131,26 @@
 
 .fa-solid fa-trash {
   color: #FF385C;
+}
+
+.btn-ghost-inside-2 {
+  color: #FF385C;
+  border: 1.8px solid #FF385C;
+  padding: 8px 24px;
+  border-radius: 5px;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  margin-top: 16px;
+  margin-left: 24px;
+}
+
+.btn-ghost-inside-2:hover {
+  color: #FF385C;
+  border: 1.8px solid #FF385C;
+  padding: 8px 24px;
+  border-radius: 5px;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  margin-top: 16px;
+  margin-left: 24px;
 }

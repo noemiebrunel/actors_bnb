@@ -6,7 +6,7 @@ class BookingsController < ApplicationController
     @booking.actor = @actor
     if @booking.save
     @booking.actor = @actor
-      redirect_to actor_path(@actor)
+    redirect_to actor_path(@actor)
     else
       render "actors/show", status: :unprocessable_entity
     end
