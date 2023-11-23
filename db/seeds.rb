@@ -37,3 +37,6 @@ cheum_conneries= Actor.create!(username: "Michel PLanteverte", mail: "", descrip
 al_pas_de_chez_nous= Actor.create!(username: "Christian Synthé", mail: "", description: "Je suis un habitué des plateaux télé : après de nombreuses apparitions dans des sitcom comme Joséphine Ange Gardien, j'ai fait mes armes dans Plus Belle la Vie.", price: 10, user_id: cyril.id, category: "Événement Travail Amour Accompagnement Famille")
 
 p "actors done"
+Booking.create!(user_id: juan.id, actor_id: shwarzminiburne.id, start_date: "2023-11-23", end_date: "2023-11-24", status: "pending")
+Booking.create!(user_id: juan.id, actor_id: shwarzminiburne.id, start_date: "2023-11-26", end_date: "2023-11-28", status: "pending")
+Booking.create!(user_id: cyril.id, actor_id: brad_pitch.id, start_date: "2023-11-26", end_date: "2023-11-28", status: "pending")
