@@ -42,7 +42,13 @@
   object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(108, 108, 108, 0.2);
+  transition: background-image 0.5s ease-in-out;
 }
+
+.card-trip img:hover {
+  box-shadow: 0 0 10px rgba(108, 108, 108, 0.5);
+}
+
 
 .card-trip h2 {
   font-size: 16px;
@@ -74,6 +80,14 @@
   width: 40px;
 }
 
+.card-trip-pricing {
+  color: #2c2c2c;
+  font-size: 14px;
+  font-weight: bold;
+  padding-left: 0px;
+  margin-top: 8px;
+  margin-bottom: 5px;
+}
 
 @media(max-width: 992px) {
   .cards {
