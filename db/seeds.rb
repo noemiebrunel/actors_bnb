@@ -20,7 +20,7 @@ p "there are #{User.count} users"
 
 brad_pitch = Actor.create!(username: "Jean-Pierre Triste", mail: "brad@mail.com", description: "Je suis spécialisé en figuration dans les moments difficiles : hôpital, cimetière, Ehpad. Je suis compatissant et souriant, j’épaule les familles dans le besoin.", price: 50, user_id: juan.id, category: "Accompagnement")
 
-shwarzminiburne = Actor.create!(username: "Stéphanie Cotillon", mail: "shwarz@mail.com", description: "J’adore les mariages ! Je suis une vraie folle quand je m’élance sur le dancefloor. Spécialisée en Madison, je sais aussi endiabler les Démons de Minuit.", price: 1000, user_id: noemie.id, category: "Evénement Famille Amour")
+shwarzminiburne = Actor.create!(username: "Stéphanie Cotillon", mail: "shwarz@mail.com", description: "J’adore les mariages ! Je suis une vraie folle quand je m’élance sur le dancefloor. Spécialisée en Madison, je sais aussi endiabler les Démons de Minuit.", price: 1000, user_id: noemie.id, category: "Événement Famille Amour")
 
 constantin_le_tarniner = Actor.create!(username: "John Gendreidéal", mail: "letartiner@mail.com", description: "Vos parents ont toujours rêvé de vous voir avec un vétérinaire, doux, aimant et assez musclé pour soulever une vache ? Je suis l’homme de la situation. Je peux aussi jouer le gendre horrible pour contrarier belle-maman.", price: 10, user_id: juan.id, category: "Famille Amour")
 
@@ -32,8 +32,8 @@ samousa_jackson = Actor.create!(username: "Magali Pilierdebar", mail: "samouelo@
 
 jean_paul_belle_cascades = Actor.create!(username: "Henri Prof", mail: "jean-paul@mail.com", description: "Aïe Aïe... Bientôt les partiels, mais tu as oublié d’aller en cours à cause des soirées BDE ? Tant mieux ! J’ai redoublé 14 fois et connais le programme de toutes les filières par coeur. Je passe les partiels à ta place. Offre spéciale : 50% remboursés sur la première commande avec le code #RATTRAPAGES", price: 10, user_id: juan.id, category: "Scolaire")
 
-cheum_conneries= Actor.create!(username: "Michel PLanteverte", mail: "", description: "Elle arrive : la soirée d’entreprise de Noël. 3h à cirer des pompes et à serrer des mains en solo, c’est soulant. Je te propose de jouer ta nouvelle conquête : ensemble, vidons le bar et remplissons l’esprit de tes collègues de souvenirs impérissables.", price: 10, user_id: noemie.id, category: "Travail Evénement")
+cheum_conneries= Actor.create!(username: "Michel PLanteverte", mail: "", description: "Elle arrive : la soirée d’entreprise de Noël. 3h à cirer des pompes et à serrer des mains en solo, c’est soulant. Je te propose de jouer ta nouvelle conquête : ensemble, vidons le bar et remplissons l’esprit de tes collègues de souvenirs impérissables.", price: 10, user_id: noemie.id, category: "Travail Événement")
 
-al_pas_de_chez_nous= Actor.create!(username: "Christian Synthé", mail: "", description: "Je suis un habitué des plateaux télé : après de nombreuses apparitions dans des sitcom comme Joséphine Ange Gardien, j'ai fait mes armes dans Plus Belle la Vie.", price: 10, user_id: cyril.id, category: "Evénement Travail Amour Accompagnement Famille")
+al_pas_de_chez_nous= Actor.create!(username: "Christian Synthé", mail: "", description: "Je suis un habitué des plateaux télé : après de nombreuses apparitions dans des sitcom comme Joséphine Ange Gardien, j'ai fait mes armes dans Plus Belle la Vie.", price: 10, user_id: cyril.id, category: "Événement Travail Amour Accompagnement Famille")
 
 p "actors done"
