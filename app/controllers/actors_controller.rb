@@ -1,6 +1,9 @@
 class ActorsController < ApplicationController
   def index
     @actors = Actor.all
+    if params[:query].present?
+      @actors = @actors.where(category: params[:query])
+    end
   end
 
   def show
@@ -49,6 +52,6 @@ class ActorsController < ApplicationController
   private
 
   def actor_params
-    params.require(:actor).permit(:username, :mail, :description, :price, :photo)
+    params.require(:actor).permit(:username, :mail, :description, :price, :photo, :category)
   end
 end
