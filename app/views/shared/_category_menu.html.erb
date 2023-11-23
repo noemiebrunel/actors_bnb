@@ -2,38 +2,54 @@
   <div class="categories">
     <div class="categories_link">
       <div class="text-center">
-        <a link_to="/actors?query=Evenements" class="d-block"><i class="fa-solid fa-calendar" style="color: #717171;"></i></a>
-
-        <%#= link_to actors_path(query: "Evenement") do %>
-        <%#<i> class="fa-solid fa-calendar" style="color: #717171;"</i>  %>
-
-        <%# end %>
 
 
+        <%= link_to actors_path(query: "Événement") do %>
+        <i class="fa-solid fa-snowman" class="icone" style="color: #717171;"></i>
 
-
+        <% end %>
 
 
         <span>Événements</span>
       </div>
       <div class="text-center">
-        <a link_to="/actors?query=" class="d-block"><i class="fa-solid fa-snowman" class="icone" style="color: #717171;"></i></a>
+         <%= link_to actors_path(query: "Famille") do %>
+        <i class="fa-solid fa-snowman" class="icone" style="color: #717171;"></i>
+
+        <% end %>
+
         <span> Famille </span>
       </div>
       <div class="text-center">
-        <a link_to="/actors?query=" class="d-block"><i class="fa-solid fa-business-time" class="icone" style="color: #717171;"></i></a>
+          <%= link_to actors_path(query: "Travail") do %>
+        <i class="fa-solid fa-business-time" class="icone" style="color: #717171;"></i>
+
+        <% end %>
+
         <span> Travail </span>
       </div>
       <div class="text-center">
-        <a link_to="# " class="d-block"><i class="fa-solid fa-heart" class="icone" style="color: #717171;"></i></a>
+         <%= link_to actors_path(query: "Amour") do %>
+        <i class="fa-solid fa-heart" class="icone" style="color: #717171;"></i>
+
+        <% end %>
+
         <span> Amour </span>
       </div>
       <div class="text-center">
-        <a link_to="#" class="d-block"><i class="fa-solid fa-handshake" class="icone" style="color: #717171;"></i></a>
+          <%= link_to actors_path(query: "Accompagnement") do %>
+        <i class="fa-solid fa-handshake" class="icone" style="color: #717171;"></i>
+
+        <% end %>
+
         <span> Accompagnement </span>
       </div>
       <div class="text-center">
-        <a link_to="#" class="d-block"><i class="fa-solid fa-user-graduate" class="icone" style="color: #717171;"></i></a>
+          <%= link_to actors_path(query: "Scolaire") do %>
+        <i class="fa-solid fa-user-graduate" class="icone" style="color: #717171;"></i>
+
+        <% end %>
+
         <span> Scolaire </span>
       </div>
     </div>
