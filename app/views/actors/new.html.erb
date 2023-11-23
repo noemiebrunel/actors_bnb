@@ -8,7 +8,7 @@
         <%= f.input :mail, label: "E-mail" %>
         <%= f.input :price, label: "Tarif journalier" %>
         <%= f.input :description, label: "Description" %>
-        <%= f.input :category, as: :check_boxes, collection: Category::COLLECTION, multiple: true, label: "Vos spécialités" %>
+        <%= f.input :category, collection: Category::COLLECTION, label: "Vos spécialités" %>
         <%= f.input :photo, as: :file %>
         <%= f.submit "Valider", class: "btn-ghost" %>
       <% end %>
