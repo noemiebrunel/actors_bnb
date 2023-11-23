@@ -1,0 +1,21 @@
+
+.back-arrow {
+  color: #FF385C;
+  font-weight: bold;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+
+}
+
+.back-arrow:hover {
+  color: #FF385C;
+  font-weight: bold;
+  transition: opacity 0.3s ease;
+
+  opacity: 1;
+}
+
+.position_back_button {
+  margin: 0px 16px 0px 20px;
+  padding: 10px;
+}
