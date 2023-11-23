@@ -15,7 +15,7 @@
   <div class="card-product-infos">
         <h2><%= @actor.username %></h2>
         <p><%= @actor.description %></p>
-        <h2><%= @actor.price %> € / jour</h2>
+        <h3><%= @actor.price %> € / jour</h3>
         <% if current_user == @actor.user %>
         <%= link_to "Editer", edit_actor_path(@actor), class: "btn btn-ghost-inside" %>
         <% else %>

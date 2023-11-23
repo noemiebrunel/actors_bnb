@@ -66,6 +66,7 @@
   padding-left: 24px;
   padding-top: 16px;
   padding-bottom: 16px;
+  padding-right: 24px;
   // font-size: 24px;
   // color: #717171;
 }
@@ -104,10 +105,10 @@
 
 .btn-ghost-inside {
   color: #FF385C;
-  border: 1px solid #FF385C;
+  border: 1.8px solid #FF385C;
   padding: 8px 24px;
   border-radius: 5px;
-  font-weight: lighter;
+  font-weight: bold;
   opacity: 0.6;
   transition: opacity 0.3s ease;
   margin-top: 16px;
@@ -116,10 +117,10 @@
 
 .btn-ghost-inside:hover {
   color: #FF385C;
-  border: 1px solid #FF385C;
+  border: 1.8px solid #FF385C;
   padding: 8px 24px;
   border-radius: 5px;
-  font-weight: lighter;
+  font-weight: bold;
   transition: opacity 0.3s ease;
   margin-top: 16px;
   margin-left: 24px;
