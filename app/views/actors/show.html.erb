@@ -17,6 +17,7 @@
     <p><%= @actor.description %></p>
     <h2><%= @actor.price %> € / jour</h2>
     <% if current_user == @actor.user %>
+    <div class="poubelle">
     <%= link_to "Editer", edit_actor_path(@actor), class: "btn btn-ghost-inside" %>
     <%= link_to actor_path(@actor), method: :delete, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "delete-link" do %>
       <i class="fa-solid fa-trash"></i>
@@ -26,6 +27,7 @@
       Contacter
     </button>
     <% end %>
+    </div>
   </div>
 </div>
 <%= render "shared/booking_form", actor: @actor, booking: @booking %>

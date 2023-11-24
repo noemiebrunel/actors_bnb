@@ -31,8 +31,8 @@
 
 .card-product {
   overflow: hidden;
+  height: auto;
   min-height: 200px;
-  // height: 400px;
   margin-left: 200px;
   margin-right: 200px;
   margin-top: 30px;
@@ -42,6 +42,7 @@
   display: flex;
   align-items: center;
   border-radius: 10px;
+  flex-grow: 2;
 }
 
 .profile_show {
@@ -64,6 +65,7 @@
 }
 
 .card-product-infos p {
+
   padding-left: 24px;
   padding-top: 16px;
   padding-bottom: 16px;
