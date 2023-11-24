@@ -1,0 +1,38 @@
+
+
+<h2>Mes demandes de réservation</h2>
+
+
+<% unless current_user.bookings.nil? %>
+
+
+<% current_user.bookings.each do |booking| %>
+<%= booking.start_date %>
+<%= booking.end_date %>
+
+<% end %>
+
+<% end %>
+
+
+
+
+
+
+
+<h2>Mes prochaines réservations</h2>
+
+
+<% @actors = Actor.where(user: current_user) %>
+
+
+<% @actors.each do |actor| %>
+
+<% actor.bookings.each do  |booking|  %>
+
+<%= booking.start_date %>
+<%= booking.end_date %>
+
+
+<% end %>
+<% end %>
