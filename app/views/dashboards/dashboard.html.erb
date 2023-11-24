@@ -15,7 +15,8 @@
         au
         <strong><%= booking.end_date %></strong>
       </p>
-      <% if booking.status == "En attente" %>
+      <% if booking.status == "En attente" || booking.status == "pending"%>
+
       <div class="réservation">
         <%= link_to "ACCEPTER", accept_booking_path(booking), method: :patch, data: { turbo_method: :patch, turbo_confirm: "Are you sure" }, class:"btn-ghost-inside"%>
         <%= link_to "REFUSER", refused_booking_path(booking), method: :patch, data: { turbo_method: :patch, turbo_confirm: "Are you sure"}, class:"btn-ghost-inside" %>
@@ -33,27 +34,21 @@
 <div class="container">
 
 
-  <h2>Mes prochaines réservations</h2>
+  <h2 class="profile-title">Mes prochaines réservations</h2>
+    <div class="card-resa">
+    <% @actors = Actor.where(user: current_user) %>
+    <% @actors.each do |actor| %>
+    <% actor.bookings.each do  |booking|  %>
+    <div>
 
-<div class="card-product">
+      <p>
+        <strong><%= booking.actor.username %></strong>
+        du
+        <strong><%= booking.start_date %></strong>
+        au
+        <strong><%= booking.end_date %></strong>
+      </p>
 
-  <% @actors = Actor.where(user: current_user) %>
-
-
-  <% @actors.each do |actor| %>
-
-  <% actor.bookings.each do  |booking|  %>
-<div class="card-product-infos">
-  <%= booking.start_date %>
-  <%= booking.end_date %>
-  <%= booking.status %>
-  <% if booking.status == "pending" || booking.status == "En attente"  %>
-
-      <%= link_to "ACCEPTER", accept_booking_path(booking), method: :patch, data: { turbo_method: :patch, turbo_confirm: "Are you sure"}, class:"btn-ghost-inside" %>
-      <%= link_to "REFUSER", refused_booking_path(booking), method: :patch, data: { turbo_method: :patch, turbo_confirm: "Are you sure" }, class:"btn-ghost-inside" %>
-      <% else %>
-      <% "" %>
-      <% end %>
     <% end %>
     <% end %>
     </div>
