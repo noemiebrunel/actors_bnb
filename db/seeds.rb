@@ -18,6 +18,13 @@ p "there are #{User.count} users"
 
 brad_pitch = Actor.create!(username: "Jean-Pierre Triste", mail: "brad@mail.com", description: "Je suis spécialisé en figuration dans les moments difficiles : hôpital, cimetière, Ehpad. Je suis compatissant et souriant, j’épaule les familles dans le besoin.", price: 50, user_id: juan.id, category: "Accompagnement")
 
+
+
+
+
+
+
+
 shwarzminiburne = Actor.create!(username: "Stéphanie Cotillon", mail: "shwarz@mail.com", description: "J’adore les mariages ! Je suis une vraie folle quand je m’élance sur le dancefloor. Spécialisée en Madison, je sais aussi endiabler les Démons de Minuit.", price: 1000, user_id: noemie.id, category: "Evénement Famille Amour")
 
 constantin_le_tarniner = Actor.create!(username: "John Gendreidéal", mail: "letartiner@mail.com", description: "Vos parents ont toujours rêvé de vous voir avec un vétérinaire, doux, aimant et assez musclé pour soulever une vache ? Je suis l’homme de la situation. Je peux aussi jouer le gendre horrible pour contrarier belle-maman.", price: 10, user_id: juan.id, category: "Famille Amour")
