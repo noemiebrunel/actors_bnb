@@ -10,7 +10,14 @@ Rails.application.routes.draw do
   resources :actors do
     resources :bookings, except: [:index, :destroy, :show]
   end
-  resources :bookings, only: [:destroy]
+  resources :bookings, only: [:destroy] do
+    member do
+      patch :accept
+      patch :refused
+    end
+
+  end
+
   # route perso pour accepter et decliner un booking
   # Defines the root path route ("/")
   # root "posts#index"

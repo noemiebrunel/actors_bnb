@@ -19,13 +19,27 @@ class BookingsController < ApplicationController
 
   def update
     @actor = Actor.find(params[:actor_id])
-    @bookin = @actor.booking.find(params[:id])
+    @booking = @actor.booking.find(params[:id])
     if @booking.update(booking_params)
       flash[:success] = "Task updated!"
       redirect_to @actor
     else
       render action: :edit
     end
+  end
+
+  def accept
+    @booking = Booking.find(params[:id])
+    @booking.status = "Accepted"
+    @booking.save
+    redirect_to dashboard_path
+  end
+
+  def refuse
+    @booking = Booking.find(params[:id])
+    @booking.status = "Refused"
+    @booking.save
+    redirect_to dashboard_path
   end
 
   private
