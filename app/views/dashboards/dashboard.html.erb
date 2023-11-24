@@ -45,7 +45,6 @@ REFUSER
   <%= booking.start_date %>
   <%= booking.end_date %>
   <%= booking.status %>
-
   <% if booking.status == "En attente" %>
   </div>
   <%= link_to "ACCEPTER", accept_booking_path(booking), method: :patch, data: { turbo_method: :patch, turbo_confirm: "Are you sure" } %>
