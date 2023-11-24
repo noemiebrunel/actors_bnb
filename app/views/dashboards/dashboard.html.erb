@@ -2,6 +2,7 @@
 
 <div class="container">
   <h2 class="profile-title">Mes demandes de réservation</h2>
+
   <div class="card-resa">
     <% unless current_user.bookings.nil? %>
     <% current_user.bookings.where(status: "En attente").each do |booking| %>
@@ -30,6 +31,7 @@
 
 
 <div class="container">
+
   <h2 class="profile-title">Mes prochaines réservations</h2>
     <div class="card-resa">
     <% @actors = Actor.where(user: current_user) %>
