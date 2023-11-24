@@ -1,7 +1,7 @@
 <div class="container">
   <h2 class="profile-title">Mes demandes de réservation</h2>
 
-<div class="card-product">
+<div class="card-resa">
   <% unless current_user.bookings.nil? %>
 
 
@@ -15,10 +15,11 @@ ACCEPTER
 <button type="button" class="btn btn-ghost-inside" data-target="#">
 REFUSER
 </button> %>
-
-  <% if booking.status == "pending" || booking.status == "En attente" %>
-  <%= link_to "ACCEPTER", accept_booking_path(booking), method: :patch, data: { turbo_method: :patch, turbo_confirm: "Are you sure" } %>
-  <%= link_to "REFUSER", refused_booking_path(booking), method: :patch, data: { turbo_method: :patch, turbo_confirm: "Are you sure" } %>
+  <% if booking.status == "En attente" %>
+  <div class="réservation">
+  <%= link_to "ACCEPTER", accept_booking_path(booking), method: :patch, data: { turbo_method: :patch, turbo_confirm: "Are you sure" }, class:"btn-ghost-inside"%>
+  <%= link_to "REFUSER", refused_booking_path(booking), method: :patch, data: { turbo_method: :patch, turbo_confirm: "Are you sure"}, class:"btn-ghost-2" %>
+  </div>
   <% else %>
   <% "" %>
   <% end %>
