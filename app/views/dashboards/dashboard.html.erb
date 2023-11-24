@@ -32,18 +32,23 @@
 
 <div class="container">
 
-  <h2 class="profile-title">Mes prochaines réservations</h2>
-    <div class="card-resa">
-    <% @actors = Actor.where(user: current_user) %>
-    <% @actors.each do |actor| %>
-    <% actor.bookings.each do  |booking|  %>
-    <div>
-        <p>
-      Du <strong><%= booking.start_date %></strong>
-      au <strong><%= booking.end_date %></strong>
-      Statut : <strong><%= booking.status %></strong>
-        </p>
-      <% if booking.status == "En attente" %>
+
+  <h2>Mes prochaines réservations</h2>
+
+<div class="card-product">
+
+  <% @actors = Actor.where(user: current_user) %>
+
+
+  <% @actors.each do |actor| %>
+
+  <% actor.bookings.each do  |booking|  %>
+<div class="card-product-infos">
+  <%= booking.start_date %>
+  <%= booking.end_date %>
+  <%= booking.status %>
+  <% if booking.status == "pending" || booking.status == "En attente"  %>
+
       <%= link_to "ACCEPTER", accept_booking_path(booking), method: :patch, data: { turbo_method: :patch, turbo_confirm: "Are you sure"}, class:"btn-ghost-inside" %>
       <%= link_to "REFUSER", refused_booking_path(booking), method: :patch, data: { turbo_method: :patch, turbo_confirm: "Are you sure" }, class:"btn-ghost-inside" %>
       <% else %>
@@ -52,6 +57,7 @@
     <% end %>
     <% end %>
     </div>
+
   </div>
 </div>
 
