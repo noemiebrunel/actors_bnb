@@ -10,15 +10,51 @@ background: white;
 box-shadow: 0 0 15px rgba(0,0,0,0.2);
 display: flex;
 align-items: center;
+justify-content: center;
 border-radius: 10px;
 flex-grow: 2;
 }
 
 .réservation {
-  // display: flex;
-  // justify-content: start;
+  display: flex;
+  justify-content: center;
+  padding: -8px -24px;
+  // margin: 0 auto;
+}
+
+.dashboard h2 {
+margin-left: 200px;
+margin-top: 30px;
+}
+
+.réservation .btn-ghost-inside {
+font-weight: 100px;
+  // margin: 0 auto;
 }
 
 .container .h2 {
   margin-left: 200px;
+}
+
+.card-product-info-2 {
+  display: block;
+  align-items: center;
+}
+
+.card-product-2 {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  height: auto;
+  min-height: 200px;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  flex-grow: 2;
 }
