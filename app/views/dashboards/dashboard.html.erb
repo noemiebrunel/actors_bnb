@@ -1,7 +1,7 @@
 <div class="container">
-  <h2>Mes demandes de réservation</h2>
+  <h2 class="profile-title">Mes demandes de réservation</h2>
 
-
+<div class="card-product">
   <% unless current_user.bookings.nil? %>
 
 
@@ -23,17 +23,17 @@ REFUSER
   <% "" %>
   <% end %>
   <% end %>
-
   <% end %>
 </div>
 
-
+</div>
 
 
 <div class="container">
 
   <h2>Mes prochaines réservations</h2>
 
+<div class="card-product">
 
   <% @actors = Actor.where(user: current_user) %>
 
@@ -41,12 +41,13 @@ REFUSER
   <% @actors.each do |actor| %>
 
   <% actor.bookings.each do  |booking|  %>
-
+<div class="card-product-infos">
   <%= booking.start_date %>
   <%= booking.end_date %>
   <%= booking.status %>
-  
+
   <% if booking.status == "En attente" %>
+  </div>
   <%= link_to "ACCEPTER", accept_booking_path(booking), method: :patch, data: { turbo_method: :patch, turbo_confirm: "Are you sure" } %>
   <%= link_to "REFUSER", refused_booking_path(booking), method: :patch, data: { turbo_method: :patch, turbo_confirm: "Are you sure" } %>
   <% else %>
@@ -55,4 +56,5 @@ REFUSER
 
   <% end %>
   <% end %>
+</div>
 </div>
