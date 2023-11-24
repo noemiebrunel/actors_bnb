@@ -21,7 +21,6 @@
     <%= link_to actor_path(@actor), method: :delete, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "delete-link" do %>
       <i class="fa-solid fa-trash"></i>
     <% end %>
-    <%= link_to "Editer", edit_actor_path(@actor), class: "btn btn-ghost-inside-2" %>
     <% else %>
     <button type="button" class="btn btn-ghost-inside" data-bs-toggle="modal" data-bs-target="#bookingModal">
       Contacter
