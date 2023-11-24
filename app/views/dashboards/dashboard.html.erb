@@ -15,7 +15,8 @@
         au
         <strong><%= booking.end_date %></strong>
       </p>
-      <% if booking.status == "En attente" %>
+      <% if booking.status == "En attente" || booking.status == "pending"%>
+
       <div class="réservation">
         <%= link_to "ACCEPTER", accept_booking_path(booking), method: :patch, data: { turbo_method: :patch, turbo_confirm: "Are you sure" }, class:"btn-ghost-inside"%>
         <%= link_to "REFUSER", refused_booking_path(booking), method: :patch, data: { turbo_method: :patch, turbo_confirm: "Are you sure"}, class:"btn-ghost-inside" %>
@@ -47,13 +48,6 @@
         <strong><%= booking.end_date %></strong>
       </p>
 
-
-      <% if booking.status == "En attente" %>
-      <%= link_to "ACCEPTER", accept_booking_path(booking), method: :patch, data: { turbo_method: :patch, turbo_confirm: "Are you sure"}, class:"btn-ghost-inside" %>
-      <%= link_to "REFUSER", refused_booking_path(booking), method: :patch, data: { turbo_method: :patch, turbo_confirm: "Are you sure" }, class:"btn-ghost-inside" %>
-      <% else %>
-      <% "" %>
-      <% end %>
     <% end %>
     <% end %>
     </div>
