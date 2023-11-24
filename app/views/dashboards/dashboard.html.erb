@@ -5,27 +5,26 @@
 
   <div class="card-resa">
     <% unless current_user.bookings.nil? %>
-    <% current_user.bookings.where(status: "En attente").each do |booking| %>
-    <div>
-      <p>
-        <strong><%= booking.user.username %></strong> demande
-        <strong><%= booking.actor.username %></strong>
-        du
-        <strong><%= booking.start_date %></strong>
-        au
-        <strong><%= booking.end_date %></strong>
-      </p>
-      <% if booking.status == "En attente" || booking.status == "pending"%>
+      <% current_user.bookings.where(status: "En attente").each do |booking| %>
+      <div>
+        <p>
+          <strong><%= booking.user.username %></strong> demande
+          <strong><%= booking.actor.username %></strong>
+          du
+          <strong><%= booking.start_date %></strong>
+          au
+          <strong><%= booking.end_date %></strong>
+        </p>
+        <% if booking.status == "En attente" || booking.status == "pending"%>
 
-      <div class="réservation">
-        <%= link_to "ACCEPTER", accept_booking_path(booking), method: :patch, data: { turbo_method: :patch, turbo_confirm: "Are you sure" }, class:"btn-ghost-inside"%>
-        <%= link_to "REFUSER", refused_booking_path(booking), method: :patch, data: { turbo_method: :patch, turbo_confirm: "Are you sure"}, class:"btn-ghost-inside" %>
-      </div>
-      <% else %>
-      <% "" %>
-      <% end %>
-      <% end %>
-    </div>
+        <div class="réservation">
+          <%= link_to "ACCEPTER", accept_booking_path(booking), method: :patch, data: { turbo_method: :patch, turbo_confirm: "Are you sure" }, class:"btn-ghost-inside"%>
+          <%= link_to "REFUSER", refused_booking_path(booking), method: :patch, data: { turbo_method: :patch, turbo_confirm: "Are you sure"}, class:"btn-ghost-inside" %>
+        </div>
+
+        <% end %>
+    <% end %>
+
     <% end %>
   </div>
 </div>
